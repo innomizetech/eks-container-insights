@@ -13,8 +13,8 @@ spec:
         name: cloudwatch-agent
     spec:
       containers:
-        - name: cloudwatch-agent
-          image: {{ .Values.image.repository }}
+        - name: cloudwatch-agent          
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}          
           resources:
             limits:
@@ -86,6 +86,7 @@ spec:
       serviceAccountName: cloudwatch-agent
 
 ---
+
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:

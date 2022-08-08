@@ -1,0 +1,21 @@
+# Default values for amazon-cloudwatch.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: amazon/cloudwatch-agent
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "1.247354.0b251981"
+
+nameOverride: ""
+fullnameOverride: ""
+namespace: "amazon-cloudwatch"
+clusterName: "devshared"
+regionName: "eu-west-2"
+
+insights:
+  metricsCollectionInterval: 60
+  forceFlushInterval: 5

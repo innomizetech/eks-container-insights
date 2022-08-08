@@ -21,6 +21,7 @@ data:
     }
 
 ---
+
 apiVersion: v1
 data:
   cluster.name: {{ .Values.clusterName }}
@@ -31,6 +32,7 @@ metadata:
   namespace: {{ .Values.namespace }}
 
 ---
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
